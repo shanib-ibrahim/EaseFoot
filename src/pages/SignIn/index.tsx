@@ -1,47 +1,23 @@
-import {
-  Box,
-  Card,
-  Button,
-  CardContent,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import styles from "./styles.module.css";
 
 const SignIn = () => {
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography sx={{ color: "text.primary", fontSize: 24 }}>
-          SignIn
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "flex-start",
-          }}
-        >
-          <Typography sx={{ color: "text.primary", fontSize: 20 }}>
-            Username
+    <Box sx={{ flexGrow: 1, border: "1px solid red" }}>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <Typography className={styles.mainHead} variant="h1">
+            Welcome back
           </Typography>
-          <TextField
-            id="standard-basic"
-            placeholder="Type your Username"
-            variant="standard"
-          />
-          <Typography sx={{ color: "text.primary", fontSize: 20 }}>
-            Password
+          <Typography className={styles.subHead} variant="body1" component="p">
+            Welcome back! Please enter your details.
           </Typography>
-          <TextField
-            id="standard-basic"
-            placeholder="Type your Password"
-            variant="standard"
-          />
-          <Button>Login</Button>
-        </Box>
-      </CardContent>
-    </Card>
+        </Grid>
+        <Grid item xs={6}>
+          <img src="/assets/signin/signin-side.png" alt="" />
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 
