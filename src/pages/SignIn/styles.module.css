@@ -1,8 +1,12 @@
-.mainHead{
-  font-size: 34px;
-  text-transform: capitalize;  
-}
-.subHead{
-    color: #636364;
-    font-size: 14px;
-}
+.mainHead {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .subHead {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
