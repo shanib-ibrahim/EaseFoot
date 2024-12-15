@@ -37,7 +37,7 @@ const SignIn = () => {
         </Grid>
         <Grid item xs={6}>
           <img
-            src="../assets/signin/signin-side.png"
+            src="./assets/signin/sigin-side.png"
             alt="A gym builder lifting weights"
           />
         </Grid>
