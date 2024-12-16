@@ -1,5 +1,6 @@
 import { Box, FormControl, Grid, TextField, Typography } from "@mui/material";
 import styles from "./styles.module.css";
+import { logo } from "../../images";
 
 const SignIn = () => {
   return (
@@ -20,10 +21,28 @@ const SignIn = () => {
               <TextField
                 id="email-input"
                 value=""
-                placeholder="Enter You Email"
+                placeholder="Enter Your Email"
                 variant="outlined"
                 fullWidth
                 type="email"
+                sx={{
+                  marginBottom: 2,
+                  paddingTop: "18px",
+                  "& .MuiOutlinedInput-root": {
+                    paddingTop: 0,
+                  },
+                }}
+              />
+              <Typography variant="body1" component="span">
+                Password
+              </Typography>
+              <TextField
+                id="password"
+                value=""
+                placeholder="Enter Your Password"
+                variant="outlined"
+                fullWidth
+                type="password"
                 sx={{
                   marginBottom: 2,
                   paddingTop: "18px",
@@ -36,10 +55,7 @@ const SignIn = () => {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <img
-            src="./assets/signin/sigin-side.png"
-            alt="A gym builder lifting weights"
-          />
+          <img src={logo} alt="A gym builder lifting weights" />
         </Grid>
       </Grid>
     </Box>
