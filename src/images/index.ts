@@ -1,3 +1,1 @@
-import logo from "src/assets/images/signin-side.png";
-
-export { logo };
+export {logo} from "/assets/images/signin-side.png";
