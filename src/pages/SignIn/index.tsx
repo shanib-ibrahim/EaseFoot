@@ -1,13 +1,20 @@
-import { Box, FormControl, Grid, TextField, Typography } from "@mui/material";
+import { Box, FormControl, Stack, TextField, Typography } from "@mui/material";
 import styles from "./styles.module.css";
-import { logo } from "../../images";
+import { siginLayout } from "../../images";
 
 const SignIn = () => {
   return (
-    <Box sx={{ flexGrow: 1, border: "1px solid red" }}>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <Typography className={styles.mainHead} variant="h1">
+    <Box sx={{ flexGrow: 1 }}>
+      <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+        <Box
+          className={styles.leftContainer}
+          sx={{ width: { xs: "100%", sm: "50%" } }}
+        >
+          <Typography
+            className={styles.mainHead}
+            variant="h1"
+            sx={{ fontSize: "34px" }}
+          >
             Welcome back
           </Typography>
           <Typography className={styles.subHead} variant="body1" component="p">
@@ -53,11 +60,15 @@ const SignIn = () => {
               />
             </FormControl>
           </Box>
-        </Grid>
-        <Grid item xs={6}>
-          <img src={logo} alt="A gym builder lifting weights" />
-        </Grid>
-      </Grid>
+        </Box>
+        <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
+          <img
+            src={siginLayout}
+            alt="A gym builder lifting weights"
+            style={{ width: "100%" }}
+          />
+        </Box>
+      </Stack>
     </Box>
   );
 };

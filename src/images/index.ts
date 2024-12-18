@@ -1,1 +1,1 @@
-export {logo} from "/assets/images/signin-side.png";
+export const siginLayout = 'src/assets/signin/layout.png'
