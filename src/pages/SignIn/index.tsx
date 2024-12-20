@@ -1,33 +1,45 @@
-import { Box, TextField, Typography, styled } from "@mui/material";
+import { Box, Button, TextField, Typography, styled } from "@mui/material";
 import styles from "./styles.module.css";
 import { siginLayout } from "../../images";
 
-// Create a styled component for the container box
+// Styled components
 const ContainerBoxStyle = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   height: "100vh",
-  border: "1px solid red",
   fontFamily: "Bree Serif, serif",
 }));
 
 const InnerBox = styled(Box)(() => ({
   display: "flex",
   margin: "auto",
-  border: "1px solid blue",
+  height: "80%",
+  width: "60%",
+  background: "#F8F8F8",
+}));
+
+const FormBox = styled(Box)(() => ({
+  flex: 1,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-evenly",
+  gap: 2,
+  padding: "2rem",
+}));
+
+const InputField = styled(TextField)(() => ({
+  borderRadius: "12px",
+  marginTop: 0,
 }));
 
 const SignIn = () => {
   return (
     <ContainerBoxStyle>
       <InnerBox>
-        <Box sx={{ flex: 1, border: "1px solid red", padding: 2 }}>
-          <Box
-            sx={{
-              textAlign: "center",
-            }}
-          >
+        {/* Form Section */}
+        <FormBox>
+          <Box sx={{ textAlign: "center" }}>
             <Typography className={styles.mainHead} sx={{ fontSize: "34px" }}>
               Welcome Back
             </Typography>
@@ -35,57 +47,58 @@ const SignIn = () => {
               Welcome back! Please enter your details.
             </Typography>
           </Box>
+
+          {/* Email Input */}
           <Box>
             <Typography
               variant="h6"
               gutterBottom
-              sx={{
-                fontSize: "14px",
-                fontWeight: "bold",
-              }}
+              sx={{ fontSize: "14px", fontWeight: "bold" }}
             >
               Email
             </Typography>
-            <TextField
+            <InputField
               type="email"
               variant="outlined"
               placeholder="Enter your email"
               fullWidth
               required
               margin="normal"
-              sx={{
-                borderRadius: "12px",
-                marginTop: 0,
-              }}
             />
           </Box>
+
+          {/* Password Input */}
           <Box>
             <Typography
               variant="h6"
               gutterBottom
-              sx={{
-                fontSize: "14px",
-                fontWeight: "bold",
-              }}
+              sx={{ fontSize: "14px", fontWeight: "bold" }}
             >
               Password
             </Typography>
-            <TextField
+            <InputField
               type="password"
               variant="outlined"
               placeholder="Enter your password"
               fullWidth
               required
               margin="normal"
-              sx={{
-                borderRadius: "12px",
-                marginTop: 0,
-              }}
             />
           </Box>
-        </Box>
-        <Box sx={{ flex: 1, border: "1px solid red" }}>
-          <img src={siginLayout} alt="A gym builder lifting weights" />
+
+          {/* Sign-in Button */}
+          <Button variant="contained" fullWidth sx={{ marginTop: 2 }}>
+            Sign in
+          </Button>
+        </FormBox>
+
+        {/* Image Section */}
+        <Box sx={{ flex: 1 }}>
+          <img
+            src={siginLayout}
+            alt="A gym builder lifting weights"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
         </Box>
       </InnerBox>
     </ContainerBoxStyle>
