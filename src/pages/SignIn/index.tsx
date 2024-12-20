@@ -7,7 +7,7 @@ const ContainerBoxStyle = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "100%",
+  height: "100vh",
   border: "1px solid red",
   fontFamily: "Bree Serif, serif",
 }));
@@ -28,19 +28,20 @@ const SignIn = () => {
               textAlign: "center",
             }}
           >
-            <Typography className={styles.mainHead}>Welcome Back</Typography>
+            <Typography className={styles.mainHead} sx={{ fontSize: "34px" }}>
+              Welcome Back
+            </Typography>
             <Typography className={styles.subHead}>
               Welcome back! Please enter your details.
             </Typography>
           </Box>
-          <Box sx={{ border: "1px solid red" }}>
+          <Box>
             <Typography
               variant="h6"
               gutterBottom
               sx={{
                 fontSize: "14px",
                 fontWeight: "bold",
-                border: "1px solid red",
               }}
             >
               Email
@@ -48,10 +49,38 @@ const SignIn = () => {
             <TextField
               type="email"
               variant="outlined"
+              placeholder="Enter your email"
               fullWidth
               required
               margin="normal"
-              sx={{ borderRadius: "12px", border: "1px solid blue" }}
+              sx={{
+                borderRadius: "12px",
+                marginTop: 0,
+              }}
+            />
+          </Box>
+          <Box>
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                fontSize: "14px",
+                fontWeight: "bold",
+              }}
+            >
+              Password
+            </Typography>
+            <TextField
+              type="password"
+              variant="outlined"
+              placeholder="Enter your password"
+              fullWidth
+              required
+              margin="normal"
+              sx={{
+                borderRadius: "12px",
+                marginTop: 0,
+              }}
             />
           </Box>
         </Box>
