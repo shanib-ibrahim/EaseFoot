@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { siginLayout } from "../../images";
 
 // Styled components
-const ContainerBoxStyle = styled(Box)(() => ({
+const ContainerBox = styled(Box)(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -35,7 +35,7 @@ const InputField = styled(TextField)(() => ({
 
 const SignIn = () => {
   return (
-    <ContainerBoxStyle>
+    <ContainerBox>
       <InnerBox>
         {/* Form Section */}
         <FormBox>
@@ -101,7 +101,7 @@ const SignIn = () => {
           />
         </Box>
       </InnerBox>
-    </ContainerBoxStyle>
+    </ContainerBox>
   );
 };
 
